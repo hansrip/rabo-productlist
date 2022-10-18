@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      Products
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered table-grey table-striped">
+        <thead>
+            <tr>
+              <th>ServiceName</th>
+              <th>ProductName</th>
+              <th>TotalVolume</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productView">
+            <td>{{ product.ServiceName }}</td>
+            <td>{{ product.ProductName }}</td>
+            <td [style.color] = "product.TotalVolume > 0 ? 'green' : (product.TotalVolume < 0 ? 'red': 'orange')" 
+                class="nav justify-content-end" data-toggle="tooltip" data-placement="top" title={{tooltipValue}}>
+                {{ product.TotalVolume }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
