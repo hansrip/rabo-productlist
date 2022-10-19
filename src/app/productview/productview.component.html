@@ -18,7 +18,7 @@
             <td>{{ product.ProductName }}</td>
             <td [style.color] = "product.TotalVolume > 0 ? 'green' : (product.TotalVolume < 0 ? 'red': 'orange')" 
                 class="nav justify-content-end" data-toggle="tooltip" data-placement="top" title={{tooltipValue}}>
-                {{ product.TotalVolume }}
+                {{ product.TotalVolume | currency:"EUR":"symbol" }}
             </td>
           </tr>
         </tbody>

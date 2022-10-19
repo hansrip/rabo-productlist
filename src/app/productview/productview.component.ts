@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductView } from '../models/productview';
 import { ProductViewService } from '../services/productview.service';
+import { registerLocaleData } from '@angular/common';
+import localeNl from '@angular/common/locales/nl';
+registerLocaleData(localeNl, 'nl');
 
 @Component({
   selector: 'app-productview',
